@@ -13,7 +13,7 @@ namespace NewNamesHelper.Tests
                 new() { Name = "Chris", Index = 3  },
             };
 
-            var namesAndIndiciesStringList = WriteNameToConsole.WriteNamesToConsole(20, 80, namesAndIncidies);
+            var namesAndIndiciesStringList = WriteNamesByIndex.WriteNames(20, 80, namesAndIncidies);
 
             Assert.Equal(61, namesAndIndiciesStringList.Count);
         }
@@ -27,7 +27,7 @@ namespace NewNamesHelper.Tests
                 new() { Name = "Chris", Index = 3  },
             };
 
-            var namesAndIndiciesStringList = WriteNameToConsole.WriteNamesToConsole(0, 80, namesAndIncidies);
+            var namesAndIndiciesStringList = WriteNamesByIndex.WriteNames(0, 80, namesAndIncidies);
 
             Assert.Equal(81, namesAndIndiciesStringList.Count);
         }
@@ -41,7 +41,7 @@ namespace NewNamesHelper.Tests
                 new() { Name = "Chris", Index = 3  },
             };
 
-            var namesAndIndiciesStringList = WriteNameToConsole.WriteNamesToConsole(-5, 80, namesAndIncidies);
+            var namesAndIndiciesStringList = WriteNamesByIndex.WriteNames(-5, 80, namesAndIncidies);
 
             Assert.Equal(86, namesAndIndiciesStringList.Count);
         }
@@ -55,7 +55,7 @@ namespace NewNamesHelper.Tests
                 new() { Name = "Chris", Index = 3  },
             };
 
-            var namesAndIndiciesStringList = WriteNameToConsole.WriteNamesToConsole(20, 0, namesAndIncidies);
+            var namesAndIndiciesStringList = WriteNamesByIndex.WriteNames(20, 0, namesAndIncidies);
 
             Assert.Empty(namesAndIndiciesStringList);
         }
@@ -69,7 +69,7 @@ namespace NewNamesHelper.Tests
                 new() { Name = "Chris", Index = 3  },
             };
 
-            var namesAndIndiciesStringList = WriteNameToConsole.WriteNamesToConsole(20, -80, namesAndIncidies);
+            var namesAndIndiciesStringList = WriteNamesByIndex.WriteNames(20, -80, namesAndIncidies);
 
             Assert.Empty(namesAndIndiciesStringList);
         }
@@ -81,7 +81,7 @@ namespace NewNamesHelper.Tests
             {
             };
 
-            var namesAndIndiciesStringList = WriteNameToConsole.WriteNamesToConsole(20, 80, namesAndIncidies);
+            var namesAndIndiciesStringList = WriteNamesByIndex.WriteNames(20, 80, namesAndIncidies);
 
             Assert.Equal(61, namesAndIndiciesStringList.Count);
         }
@@ -95,7 +95,7 @@ namespace NewNamesHelper.Tests
                 new() { Name = "Chris", Index = 3  },
             };
 
-            var namesAndIndiciesStringList = WriteNameToConsole.WriteNamesToConsole(1, 15, namesAndIncidies);
+            var namesAndIndiciesStringList = WriteNamesByIndex.WriteNames(1, 15, namesAndIncidies);
 
             Assert.Equal(15, namesAndIndiciesStringList.Count);
 
@@ -126,7 +126,7 @@ namespace NewNamesHelper.Tests
                 new() { Name = "Samantha", Index = 2  },
             };
 
-            var namesAndIndiciesStringList = WriteNameToConsole.WriteNamesToConsole(1, 15, namesAndIncidies);
+            var namesAndIndiciesStringList = WriteNamesByIndex.WriteNames(1, 15, namesAndIncidies);
 
             Assert.Equal(15, namesAndIndiciesStringList.Count);
 
@@ -155,7 +155,7 @@ namespace NewNamesHelper.Tests
                 new() { Name = "Jeffery", Index = 5  },
             };
 
-            var namesAndIndiciesStringList = WriteNameToConsole.WriteNamesToConsole(1, 15, namesAndIncidies);
+            var namesAndIndiciesStringList = WriteNamesByIndex.WriteNames(1, 15, namesAndIncidies);
 
             Assert.Equal(15, namesAndIndiciesStringList.Count);
 
@@ -183,7 +183,7 @@ namespace NewNamesHelper.Tests
             {
             };
 
-            var namesAndIndiciesStringList = WriteNameToConsole.WriteNamesToConsole(1, 15, namesAndIncidies);
+            var namesAndIndiciesStringList = WriteNamesByIndex.WriteNames(1, 15, namesAndIncidies);
 
             Assert.Equal(15, namesAndIndiciesStringList.Count);
 
@@ -207,7 +207,7 @@ namespace NewNamesHelper.Tests
         [Fact]
         public void CheckNullInputList()
         {
-            Assert.Throws<ArgumentNullException>(() => WriteNameToConsole.WriteNamesToConsole(1, 15, null));
+            Assert.Throws<ArgumentNullException>(() => WriteNamesByIndex.WriteNames(1, 15, null));
         }
     }
 }

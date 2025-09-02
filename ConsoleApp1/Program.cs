@@ -9,7 +9,7 @@ var namesAndIncidies = new List<NameIndexPair>()
     new() { Name = "Chris", Index = 3  },
 };
 
-var namesAndIndiciesStringList = WriteNameToConsole.WriteNamesToConsole(20, 80, namesAndIncidies);
+var namesAndIndiciesStringList = WriteNamesByIndex.WriteNames(20, 80, namesAndIncidies);
 
 foreach (var nameOrIndex in namesAndIndiciesStringList)
 {

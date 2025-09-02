@@ -3,9 +3,9 @@ using System.Text;
 
 namespace NewNamesHelper
 {
-    public class WriteNameToConsole
+    public class WriteNamesByIndex
     {
-        public static List<string> WriteNamesToConsole(int LowerBounds, int UpperBounds, List<NameIndexPair> NamesAndIndicies)
+        public static List<string> WriteNames(int LowerBounds, int UpperBounds, List<NameIndexPair> NamesAndIndicies)
         {
             var namesAndIndiciesStringList = new List<string>();
             for (var i = LowerBounds; i <= UpperBounds; i++)
