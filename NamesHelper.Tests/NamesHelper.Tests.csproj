@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\NamesHelper\NamesHelper.csproj" />
     <ProjectReference Include="..\NewNamesHelper\NamesHelper.csproj" />
   </ItemGroup>
 

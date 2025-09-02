@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NewNamesHelper\NamesHelper.csproj" />
+    <ProjectReference Include="..\NamesHelper\NamesHelper.csproj" />
   </ItemGroup>
 
 </Project>

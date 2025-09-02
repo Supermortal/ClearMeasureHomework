@@ -1,7 +1,6 @@
-﻿using NamesHelper;
-using System.Text;
+﻿using System.Text;
 
-namespace NewNamesHelper
+namespace NamesHelper
 {
     public class WriteNamesByIndex
     {

@@ -1,7 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using NamesHelper;
-using NewNamesHelper;
-using System.Text;
 
 var namesAndIncidies = new List<NameIndexPair>()
 {
