@@ -1,35 +1,32 @@
-﻿using System.Text;
+﻿using NamesHelper;
+using System.Text;
 
 namespace NewNamesHelper
 {
     public class WriteNameToConsole
     {
-        public static List<string> WriteNamesToConsole()
+        public static List<string> WriteNamesToConsole(int LowerBounds, int UpperBounds, List<NameIndexPair> NamesAndIndicies)
         {
-            var namesAndIndiciesList = new List<string>();
-            for (var i = 20; i <= 80; i++)
+            var namesAndIndiciesStringList = new List<string>();
+            for (var i = LowerBounds; i <= UpperBounds; i++)
             {
-                if (i % 5 == 0 || i % 3 == 0)
+                var currentNameAndIndicies = NamesAndIndicies.Where(ni => i % ni.Index == 0);
+                if (!currentNameAndIndicies.Any())
                 {
-                    var sb = new StringBuilder();
-                    if (i % 5 == 0)
-                    {
-                        sb.Append("Jeffery ");
-                    }
-                    if (i % 3 == 0)
-                    {
-                        sb.Append("Chris");
-                    }
+                    namesAndIndiciesStringList.Add($"{i}");
+                    continue;
+                }
 
-                    namesAndIndiciesList.Add(sb.ToString());
-                }
-                else
+                var names = new StringBuilder();
+                foreach (var nameAndIndex in currentNameAndIndicies)
                 {
-                    namesAndIndiciesList.Add($"{i}");
+                    names.Append($"{nameAndIndex.Name} ");
                 }
+
+                namesAndIndiciesStringList.Add(names.ToString().TrimEnd(' '));
             }
 
-            return namesAndIndiciesList;
+            return namesAndIndiciesStringList;
         }
     }
 }
